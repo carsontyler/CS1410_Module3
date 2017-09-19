@@ -3,7 +3,6 @@
 // Copyright ©2017 WSU
 #include <iostream>
 using namespace std;
-#include <iostream>
 /*  Structures/Constants */
 struct house
 {
@@ -32,7 +31,7 @@ int main(int argc, char* argv[])
 
     int comparison = ComparePrices(firstHouse, secondHouse);
     /* Based on comparison value, use a switch
-     * statement to display all posibilities:
+     * statement to display all possibilities:
      * 1) "the first house is cheaper"
      * 2) "the two houses are equally expensive"
      * 3) "the second house is cheaper"
@@ -41,7 +40,7 @@ int main(int argc, char* argv[])
     switch (comparison)
     {
         case 1:
-            cout << "The first hosue is cheaper" << endl;
+            cout << "The first house is cheaper" << endl;
             break;
         case 2:
             cout << "The two houses are equally expensive" << endl;
@@ -57,7 +56,8 @@ int main(int argc, char* argv[])
     return 0;
 }
 
-/* Function Defenitions */
+/* Function Definitions */
+// Enter information for a new house set
 struct house InputHouse(void)
 {
     house h;
@@ -70,11 +70,13 @@ struct house InputHouse(void)
 
     return h;
 }
+// Print information for the houses
 void PrintHouse(int houseNum, struct house h)
 {
     cout << houseNum << " house: at " << h.streetNum << " " <<
          h.streetName << " " << " for $" << h.price << endl;
 }
+// Compare the two prices, returning a number for comparison in main
 int ComparePrices(struct house h1, struct house h2)
 {
     int i;
