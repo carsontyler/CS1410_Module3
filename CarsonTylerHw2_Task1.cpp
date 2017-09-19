@@ -10,7 +10,7 @@ using namespace std;
 // Main Program
 int main(void)
 {
-    
-     return 0;
+
+    return 0;
 }
 // Function Definitions
