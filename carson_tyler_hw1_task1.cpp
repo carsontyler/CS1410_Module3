@@ -38,6 +38,21 @@ int main(int argc, char* argv[])
      * 3) "the second house is cheaper"
      * 4) "invalid comparison value there must be a bug"
      */
+    switch (comparison)
+    {
+        case 1:
+            cout << "The first hosue is cheaper" << endl;
+            break;
+        case 2:
+            cout << "The two houses are equally expensive" << endl;
+            break;
+        case 3:
+            cout << "The second house is cheaper" << endl;
+            break;
+        default:
+            cout << "Invalid comparison, please try again" << endl;
+            break;
+    }
 
     return 0;
 }
@@ -62,27 +77,15 @@ void PrintHouse(int houseNum, struct house h)
 }
 int ComparePrices(struct house h1, struct house h2)
 {
-    /*switch (h1.price, h2.price)
-    {
-        case h1.price < h2.price:
-            cout << "The first hosue is cheaper" << endl;
-            break;
-        case h2.price == h1.price:
-            cout << "The two houses are equally expensive" << endl;
-            break;
-        case h2.price < h1.price:
-            cout << "The second house is cheaper" << endl;
-            break;
-        default:
-            cout << "Invalid comparison, please try again" << endl;
-            break;
-    }*/
+    int i;
     if(h1.price < h2.price)
-        cout << "The first house is cheaper" << endl;
+        i = 1;
     else if(h2.price == h1.price)
-        cout << "The two houses are equally expensive" << endl;
+        i = 2;
     else if(h2.price < h1.price)
-        cout << "The second house is cheaper" << endl;
+        i = 3;
     else
-        cout << "There must be an error, try again." << endl;
+        i = 4;
+
+    return i;
 }
